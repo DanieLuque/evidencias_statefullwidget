@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Formulario(),
+      home: CambiarColor(),
     );
   }
 }
@@ -197,16 +197,18 @@ class _CambiarColorState extends State<CambiarColor> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-            Container(
-              width: 200,
+            Card(
+              elevation: 10,
+              child: Container(
+                width: 200,
               height: 200,
               decoration: BoxDecoration(
                 color: colorTarjeta,
                 borderRadius: BorderRadius.circular(10),
               ),
+              )
             ),
-
+            
             const SizedBox(height: 20),
 
             ElevatedButton(
